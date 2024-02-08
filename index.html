@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Form</title>
+    <style>
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('ff.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background-color: #ebecf1b7;
+            border-radius: 35px;
+            padding: 35px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.808);
+
+        }
+        h1, h2 {
+            text-align: center;
+            color: #181515;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #14406e96;
+text-shadow: -1px -1px 0 #0000009c;;
+        }
+
+
+        label {
+            font-weight: bold;
+            font-size: 13px;
+            margin-bottom: 10px;
+            color: #333;
+            margin-left: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="tel"],
+        select,
+        textarea,
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #01010269;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .submit-btn {
+            background-color: #007bff7e;
+            color: #fff;
+            border: 2px solid #837b7b5d;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            margin-left: 35%;
+            width: 30%;
+        }
+        .submit-btn:hover {
+            background-color: #094b92;
+        }
+
+        .photo-upload {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 60px;
+            border: 2px solid #01010269;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-size: 14px;
+            margin-top: 5px;
+            background-color: #fff;
+
+        }
+
+        .sub{
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 60px;
+            font-family:monospace;
+            font-weight: bold;
+            color: #0f1427d5;
+            font-style: oblique;
+        }
+
+        .tt{
+            margin-bottom: 0%;
+            font-size: 50px;
+            font-weight: 1200;
+            color: #0f1427d5;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1 class="tt">Resume Form</h1>
+
+        <p class="sub">Generate your resume by providing the needed information below.</p>
+
+
+        <div class="section">
+            <h2>Upload Photo</h2>
+            <div class="photo-upload">
+            <input type="file" id="photo" name="photo">
+        </div>
+        </div>
+    
+    
+    <form id="resumeForm" action="submission_page.html" method="post">
+        <h2>Personal Information</h2>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+        
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+        
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
+        
+        <label for="height">Height (cm):</label>
+        <input type="text" id="height" name="height" placeholder="Height in cm">
+        
+        <label for="weight">Weight (kg):</label>
+        <input type="text" id="weight" name="weight" placeholder="Weight in kg">
+        
+        <label for="civilStatus">Civil Status:</label>
+        <select id="civilStatus" name="civilStatus">
+            <option value="Single">Single</option>
+            <option value="Married">Married</option>
+            <option value="Divorced">Divorced</option>
+            <option value="Widowed">Widowed</option>
+        </select>
+        
+        <label for="religion">Religion:</label>
+        <input type="text" id="religion" name="religion">
+        
+        <label for="languages">Languages Spoken:</label>
+        <input type="text" id="languages" name="languages">
+        
+        <h2>Contact Information</h2>
+        <label for="cellphoneNumber">Cellphone Number:</label>
+        <input type="tel" id="cellphoneNumber" name="cellphoneNumber" required>
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <h2>Family Information</h2>
+        <label for="motherName">Mother's Name:</label>
+        <input type="text" id="motherName" name="motherName">
+        
+        <label for="fatherName">Father's Name:</label>
+        <input type="text" id="fatherName" name="fatherName">
+        
+        <label for="spouseName">Spouse's Name (if applicable):</label>
+        <input type="text" id="spouseName" name="spouseName">
+        
+        <h2>Educational Background</h2>
+        <label for="highestEducation">Highest Educational Attainment:</label>
+        <input type="text" id="highestEducation" name="highestEducation">
+        
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="course">
+        
+        <label for="dateGraduated">Date Graduated:</label>
+        <input type="date" id="dateGraduated" name="dateGraduated">
+        
+        <h2>Skills</h2>
+        <label for="skill1">Skill 1:</label>
+        <input type="text" id="skill1" name="skill1">
+        
+        <label for="skill2">Skill 2:</label>
+        <input type="text" id="skill2" name="skill2">
+        
+        <label for="skill3">Skill 3:</label>
+        <input type="text" id="skill3" name="skill3">
+        
+        <label for="skill4">Skill 4:</label>
+        <input type="text" id="skill4" name="skill4">
+        
+        <label for="skill5">Skill 5:</label>
+        <input type="text" id="skill5" name="skill5">
+        
+        <h2>Professional References</h2>
+        <div>
+            <label for="reference1Name">Reference 1:</label>
+            <input type="text" id="reference1Name" name="reference1Name">
+            <label for="reference1Occupation">Occupation:</label>
+            <input type="text" id="reference1Occupation" name="reference1Occupation">
+            <label for="reference1Contact">Contact Number:</label>
+            <input type="tel" id="reference1Contact" name="reference1Contact">
+        </div>
+        <div style="margin-top: 20px;">
+            <label for="reference2Name">Reference 2:</label>
+            <input type="text" id="reference2Name" name="reference2Name">
+            <label for="reference2Occupation">Occupation:</label>
+            <input type="text" id="reference2Occupation" name="reference2Occupation">
+            <label for="reference2Contact">Contact Number:</label>
+            <input type="tel" id="reference2Contact" name="reference2Contact">
+        </div>
+        
+        <input type="submit" class="submit-btn" value="Submit">
+    </form>
+</div>
+</body>
+</html>
